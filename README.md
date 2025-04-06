@@ -1,2 +1,0 @@
-# Projeto-Crud
-Projeto CRUD. 
