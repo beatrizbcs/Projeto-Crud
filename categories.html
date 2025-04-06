@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Categorias</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Usuários</a>
+        <a href="plantations.html">Plantações</a>
+        <a href="products.html">Produtos</a>
+        <a href="categories.html">Categorias</a>
+        <a href="harvests.html">Safras</a>
+        <a href="supplies.html">Insumos</a>
+    </nav>
+
+    <h1>Categorias Cadastradas</h1>
+    <button id="addCategoryBtn">Adicionar Categoria</button>
+
+    <table id="categoriesTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As categorias serão listadas aqui via JS -->
+        </tbody>
+    </table>
+
+    <!-- Modal para adicionar/editar categoria -->
+    <div id="categoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Adicionar Categoria</h2>
+            <form id="categoryForm">
+                <label for="categoryName">Nome:</label>
+                <input type="text" id="categoryName" name="categoryName" required>
+
+                <button type="submit" id="saveCategoryBtn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/category.js"></script>
+</body>
+</html>

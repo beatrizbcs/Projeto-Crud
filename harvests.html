@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Safras</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Usuários</a>
+        <a href="plantations.html">Plantações</a>
+        <a href="products.html">Produtos</a>
+        <a href="categories.html">Categorias</a>
+        <a href="harvests.html">Safras</a>
+        <a href="supplies.html">Insumos</a>
+    </nav>
+
+    <h1>Safras Cadastradas</h1>
+    <button id="addHarvestBtn">Adicionar Safra</button>
+
+    <table id="harvestsTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Data Início</th>
+                <th>Data Fim</th>
+                <th>Plantação</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As safras serão listadas aqui via JS -->
+        </tbody>
+    </table>
+
+    <!-- Modal para adicionar/editar safra -->
+    <div id="harvestModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Adicionar Safra</h2>
+            <form id="harvestForm">
+                <label for="harvestName">Nome:</label>
+                <input type="text" id="harvestName" name="harvestName" required>
+
+                <label for="startDate">Data de Início:</label>
+                <input type="date" id="startDate" name="startDate" required>
+
+                <label for="endDate">Data de Término:</label>
+                <input type="date" id="endDate" name="endDate" required>
+
+                <label for="plantationId">Plantação:</label>
+                <select id="plantationId" name="plantationId" required>
+                    <!-- Plantações disponíveis serão carregadas via JS -->
+                </select>
+
+                <button type="submit" id="saveHarvestBtn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/harvest.js"></script>
+</body>
+</html>

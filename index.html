@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Produtos e Categorias</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Usuários</a>
+        <a href="plantations.html">Plantações</a>
+        <a href="products.html">Produtos</a>
+        <a href="categories.html">Categorias</a>
+        <a href="harvests.html">Safras</a>
+        <a href="supplies.html">Insumos</a>
+    </nav>
+
+    <h1>Produtos Cadastrados</h1>
+    <button id="addProductBtn">Adicionar Produto</button>
+
+    <table id="productsTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os produtos serão listados aqui via JS -->
+        </tbody>
+    </table>
+
+    <!-- Modal para adicionar/editar produto -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Adicionar Produto</h2>
+            <form id="productForm">
+                <label for="productName">Nome:</label>
+                <input type="text" id="productName" name="productName" required>
+
+                <label for="category">Categoria:</label>
+                <select id="category" name="category" required>
+                    <!-- As categorias serão carregadas via JS -->
+                </select>
+
+                <button type="submit" id="saveProductBtn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/product.js"></script>
+</body>
+</html>
